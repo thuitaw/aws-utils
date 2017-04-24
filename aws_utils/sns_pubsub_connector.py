@@ -39,13 +39,6 @@ class SNSPubSubConnector(object):
             if topic['TopicArn'].split(":")[-1] == topic_name:
                 return topic['TopicArn']
 
-    def get_topic_name(self, topic_name, topic_):
-        if hasattr(self, 'topic_name_postfix'):
-            topic_name_postfix = getattr(self, 'topic_name_postfix')
-            if topic_name_postfix:
-                topic_name += topic_name_postfix
-        return topic_name
-
     def sns_notify(self, topic_name, subject, json_message):
         self.logger.debug(
             "SNS Notify %s:%s %s" % (topic_name, subject, json_message))
