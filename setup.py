@@ -7,6 +7,7 @@ setup(
     name='aws-utils',
     version='0.1',
     author="Thuita Wachira",
+    auuthor_email="thuita.wachira@gmail.com",
     url="https://github.com/thuitaw/aws-utils.git",
     keywords="utilities utils aws ",
     description="aws utilities package",
